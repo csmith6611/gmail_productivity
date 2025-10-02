@@ -1,1 +1,9 @@
-{"queries": ["subject:Payment Receipt from Shady Grove", "subject:Your Flight Receipt", "from:LabcorpConfirmations@labcorp.com", "subject:Payment Confirmation", "from:billing.halfwild@gmail.com"]}
+{
+    "queries": [
+        "subject:Payment Receipt from Shady Grove",
+        "subject:Your Flight Receipt",
+        "from:LabcorpConfirmations@labcorp.com",
+        "subject:Payment Confirmation",
+        "from:billing.halfwild@gmail.com"
+    ]
+}
