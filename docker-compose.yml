@@ -6,4 +6,4 @@ services:
       - stack.env
     restart: 'unless-stopped'
     volumes: 
-    - /opt/paperless_workflow_creds:/credentials:ro
+    - /opt/paperless_workflow_creds:/credentials

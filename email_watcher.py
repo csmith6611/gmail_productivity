@@ -35,7 +35,7 @@ import base64
 CONFIG = {
     "CREDENTIALS_FILE": f'{os.environ.get("CREDENTIALS_FILE_NAME")}',
     "TOKEN_FILE": f"{os.environ.get('TOKEN_FILE_NAME')}",
-    "LAST_RUN_FILE": "last_run.json",         
+    "LAST_RUN_FILE": f"{os.environ.get('LAST_RUN_FILE')}",         
     "USER_ID": "me",
     "PING_URL": f"http://{os.environ.get('PAPERLESS_HOSTNAME')}:{os.environ.get('PAPERLESS_PORT')}/health/", 
     "PING_INTERVAL_SECONDS": 10 * 60,        
