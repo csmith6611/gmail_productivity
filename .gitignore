@@ -1,0 +1,8 @@
+.env
+downloads/
+synthetics/
+credentials.json
+last_run.json
+*.eml
+token.json
+*.log
