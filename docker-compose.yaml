@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  email-watcher:
+    build: .
+    env_file:
+      - ./.env
+    restart: 'unless-stopped'
+    ports:
+      - 8080:8080
