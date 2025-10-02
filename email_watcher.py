@@ -33,7 +33,7 @@ import base64
 
 # === CONFIG - edit these ===
 CONFIG = {
-    "CREDENTIALS_FILE": 'credentials.json',
+    "CREDENTIALS_FILE": f'{os.environ.get("CREDENTIALS_FILE_NAME")}',
     "TOKEN_FILE": f"{os.environ.get('TOKEN_FILE_NAME')}",
     "LAST_RUN_FILE": "last_run.json",         
     "USER_ID": "me",
@@ -46,7 +46,7 @@ CONFIG = {
     },
     "DOWNLOAD_DIR": "downloads",
     "SYNTHETICS_DIR": "synthetics",             
-             
+    "QUERIES_PATH": "./queries.json",
     "LOG_FILE": "gmail_receipt_watcher.log",
     "SCOPES": ["https://www.googleapis.com/auth/gmail.readonly"],  
 }

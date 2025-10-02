@@ -6,3 +6,4 @@ last_run.json
 *.eml
 token.json
 *.log
+paperless_workflow_creds

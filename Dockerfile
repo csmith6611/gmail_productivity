@@ -13,7 +13,7 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY script.py .
+COPY email_watcher.py .
 
 
-CMD ["python", "script.py"]
+CMD ["python", "email_watcher.py"]
