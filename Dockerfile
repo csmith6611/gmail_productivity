@@ -15,5 +15,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY email_watcher.py .
 
+COPY queries.json .
+
 
 CMD ["python", "email_watcher.py"]
