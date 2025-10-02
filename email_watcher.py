@@ -274,7 +274,7 @@ def gmail_date_to_epoch(headers):
     return int(time.time())
 
 # --- process single message ---
-def process_message(service, msg):
+def process_message(service, msg, query):
     msg_full = get_message_full(service, msg["id"])
     if not msg_full:
         return None
@@ -292,7 +292,7 @@ def process_message(service, msg):
         logger.error("No file to upload for message %s", msg["id"])
         return epoch
 
-    metadata = {"source": "gmail_watcher", "title": CONFIG["SUBJECT_TO_SEARCH"]}
+    metadata = {"source": "gmail_watcher", "title": query}
     ok = upload_to_paperless(file_to_upload, metadata=metadata)
     if ok:
         logger.info("Uploaded %s for message %s", file_to_upload, msg["id"])
@@ -344,7 +344,7 @@ def main_loop():
                     else:
                         logger.info("Found %d messages", len(messages))
                         for m in messages:
-                            e = process_message(service, m)
+                            e = process_message(service, m, query)
 
                 last_run = datetime.now().timestamp()
                 save_last_run(last_run)
